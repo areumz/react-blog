@@ -9,7 +9,8 @@
 /coverage
 
 # production
-/build
+# 배포를 위해 일시적으로 주석 처리
+# /build
 
 # misc
 .DS_Store
