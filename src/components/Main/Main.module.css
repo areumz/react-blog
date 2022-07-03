@@ -1,0 +1,8 @@
+.maxWidth {
+    width: 1224px;
+    max-width: calc(100% - 4rem);
+    margin: 0 auto;
+    display: flex;
+    gap: 2.4rem;
+    position: relative;
+}
