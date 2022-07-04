@@ -155,6 +155,19 @@ ul {
 }
 
 /* title */
+.pv-author-wrap {
+    display: flex;
+    gap: 1rem;
+    color: #767676;
+    font-size: 1.2rem;
+}
+
+.pv-author-wrap dd {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
 .pv-view .pv-wrap-box .pv-author-wrap {
 	height: 6.4rem;
 	font-size: 1.4rem;
@@ -211,6 +224,17 @@ ul {
 
 .pv-view .pv-category {
 	margin: 2rem 0 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--main-color);
+}
+
+.pv-view .pv-category dd {
+    margin-right: 0.4rem;
+    padding: 0.2rem 1.2rem;
+    border-radius: calc(var(--border-radius) * 2);
+    background: var(--gray-background);
+    font-size: 1.2rem;
 }
 
 .pv-button img {
