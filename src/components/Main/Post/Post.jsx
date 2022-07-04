@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from './Post.module.css';
+import profile from '../../../assets/profile.jpg';
 
 const Post = ({key, post, postlist}) => {
+    const publicUrl = process.env.PUBLIC_URL;
+
     return (
         <>
             <Link to='/post/1'>
                 <li key={postlist[0].id} className={styles.post}>
                     <article>
-                        <img src={postlist[0].thumbnail} alt="" />
+                        <img src={`${publicUrl}/assets/post-img1.jpg`} alt="" />
                         <div className={styles.contentsWrap}>
                             <dl className={styles.category}>
                                 <dt className="a11y-hidden">Category</dt>
@@ -18,7 +21,7 @@ const Post = ({key, post, postlist}) => {
                             <h3>Lorem, ipsum dolor sit amet     consectetur     adipisicing elit</h3>
                             <dl className={styles.authorWrap}>
 			    	    		<dt class="a11y-hidden">Author</dt>
-			    	    			<dd className={styles.author}><img src="../../assets/profile.jpg" alt="" />   Chilli</dd>
+			    	    			<dd className={styles.author}><img src={profile} alt="" />   Chilli</dd>
 			    	    		<dt class="a11y-hidden">Created</dt>
 			    	    			<dd className={styles.created}>2022.05.25</dd>
 			    	    	</dl>
@@ -38,9 +41,9 @@ const Post = ({key, post, postlist}) => {
             <Link to='/post/2'>
                 <li key={postlist[1].id} className={styles.post}>
                     <article>
-                        <img src={postlist[1].thumbnail} alt="" />
+                        <img src={`${publicUrl}/assets/post-img2.jpg`} alt="" />
                         <div className={styles.contentsWrap}>
-                            <dl>
+                            <dl className={styles.category}>
                                 <dt className="a11y-hidden">Category</dt>
                                     <dd>{postlist[1].category[0]}</dd>
                                     <dd>{postlist[1].category[0]}</dd>
@@ -48,7 +51,7 @@ const Post = ({key, post, postlist}) => {
                             <h3>Lorem, ipsum dolor sit amet     consectetur     adipisicing elit</h3>
                             <dl class={styles.authorWrap}>
 			    	    		<dt class="a11y-hidden">Author</dt>
-			    	    			<dd className={styles.author}><img src="../../assets/profile.jpg" alt="" />   Chilli</dd>
+			    	    			<dd className={styles.author}><img src={profile} alt="" />   Chilli</dd>
 			    	    		<dt class="a11y-hidden">Created</dt>
 			    	    			<dd class={styles.created}>2022.05.25</dd>
 			    	    	</dl>
@@ -69,9 +72,9 @@ const Post = ({key, post, postlist}) => {
             <li key={postlist[2].id} className={styles.post}>
                 
                     <article>
-                        <img src={postlist[2].thumbnail} alt="" />
+                        <img src={`${publicUrl}/assets/post-img3.jpg`} alt="" />
                         <div className={styles.contentsWrap}>
-                            <dl>
+                            <dl className={styles.category}>
                                 <dt className="a11y-hidden">Category</dt>
                                     <dd>{postlist[2].category[0]}</dd>
                                     <dd>{postlist[2].category[1]}</dd>
@@ -79,7 +82,7 @@ const Post = ({key, post, postlist}) => {
                             <h3>Lorem, ipsum dolor sit amet     consectetur     adipisicing elit</h3>
                             <dl className={styles.authorWrap}>
 			    	    		<dt className="a11y-hidden">Author</dt>
-			    	    			<dd className={styles.author}><img src="../../assets/profile.jpg" alt="" />   Chilli</dd>
+			    	    			<dd className={styles.author}><img src={profile} alt="" />   Chilli</dd>
 			    	    		<dt className="a11y-hidden">Created</dt>
 			    	    			<dd className={styles.created}>2022.05.25</dd>
 			    	    	</dl>
@@ -99,9 +102,9 @@ const Post = ({key, post, postlist}) => {
             <Link to='/post/4'>
                 <li key={postlist[3].id} className={styles.post}>
                     <article>
-                        <img src={postlist[3].thumbnail} alt="" />
+                        <img src={`${publicUrl}/assets/post-img4.jpg`} alt="" />
                         <div className={styles.contentsWrap}>
-                            <dl>
+                            <dl className={styles.category}>
                                 <dt className="a11y-hidden">Category</dt>
                                     <dd>{postlist[3].category[0]}</dd>
                                     <dd>{postlist[3].category[1]}</dd>
@@ -109,7 +112,7 @@ const Post = ({key, post, postlist}) => {
                             <h3>Lorem, ipsum dolor sit amet     consectetur     adipisicing elit</h3>
                             <dl className={styles.authorWrap}>
 			    	    		<dt className="a11y-hidden">Author</dt>
-			    	    			<dd className={styles.author}><img src="../../assets/profile.jpg" alt="" />   Chilli</dd>
+			    	    			<dd className={styles.author}><img src={profile} alt="" />   Chilli</dd>
 			    	    		<dt className="a11y-hidden">Created</dt>
 			    	    			<dd className={styles.created}>2022.05.25</dd>
 			    	    	</dl>
@@ -130,9 +133,9 @@ const Post = ({key, post, postlist}) => {
             <Link to='/post/5'>
                 <li key={postlist[4].id} className={styles.post}>
                     <article>
-                        <img src={postlist[4].thumbnail} alt="" />
+                        <img src={`${publicUrl}/assets/post-img5.jpg`} alt="" />
                         <div className={styles.contentsWrap}>
-                            <dl>
+                            <dl className={styles.category}>
                                 <dt className="a11y-hidden">Category</dt>
                                     <dd>{postlist[4].category[0]}</dd>
                                     <dd>{postlist[5].category[1]}</dd>
@@ -140,7 +143,7 @@ const Post = ({key, post, postlist}) => {
                             <h3>Lorem, ipsum dolor sit amet     consectetur     adipisicing elit</h3>
                             <dl className={styles.authorWrap}>
 			    	    		<dt class="a11y-hidden">Author</dt>
-			    	    			<dd className={styles.author}><img src="../../assets/profile.jpg" alt="" />   Chilli</dd>
+			    	    			<dd className={styles.author}><img src={profile} alt="" />   Chilli</dd>
 			    	    		<dt className="a11y-hidden">Created</dt>
 			    	    			<dd className="created">2022.05.25</dd>
 			    	    	</dl>
@@ -160,9 +163,9 @@ const Post = ({key, post, postlist}) => {
             <Link to='/post/6'>
                 <li key={postlist[5].id} className={styles.post}>
                     <article>
-                        <img src={postlist[5].thumbnail} alt="" />
+                        <img src={`${publicUrl}/assets/post-img6.jpg`} alt="" />
                         <div className={styles.contentsWrap}>
-                            <dl>
+                            <dl className={styles.category}>
                                 <dt className="a11y-hidden">Category</dt>
                                     <dd>{postlist[5].category[0]}</dd>
                                     <dd>{postlist[5].category[1]}</dd>
@@ -170,7 +173,7 @@ const Post = ({key, post, postlist}) => {
                             <h3>Lorem, ipsum dolor sit amet     consectetur     adipisicing elit</h3>
                             <dl className={styles.authorWrap}>
 			    	    		<dt className="a11y-hidden">Author</dt>
-			    	    			<dd className={styles.author}><img src="../../assets/profile.jpg" alt="" />   Chilli</dd>
+			    	    			<dd className={styles.author}><img src={profile} alt="" />   Chilli</dd>
 			    	    		<dt className="a11y-hidden">Created</dt>
 			    	    			<dd className={styles.created}>2022.05.25</dd>
 			    	    	</dl>
