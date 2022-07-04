@@ -4,12 +4,13 @@ import facebook from '../../../assets/Facebook.svg';
 import twitter from '../../../assets/Twitter.svg';
 import instagram from '../../../assets/Instagram.svg';
 import github from '../../../assets/Github.svg';
+import profile from '../../../assets/profile.jpg';
 
 const Aboutme = () => {
     return (
         <aside className={styles.about}>
             <h2>About Me</h2>
-                <img src="../../assets/profile.jpg" alt="프로필 이미지" className={styles.userProfile} />
+                <img src={profile} alt="프로필 이미지" className={styles.userProfile} />
                 <p className={styles.userName}>Chilli</p>
                 <p className={styles.userDescription}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
