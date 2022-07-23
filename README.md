@@ -38,9 +38,9 @@
 * 빌드할 때 웹팩이 chukFile을 JS가 아닌 HTML 구문으로 인식해서 생기는 문제   
 프로젝트 작업시에도 html 파일 첫줄이 왜 계속 에러가 나는지 궁금했는데, `<DOCTYPE`으로 시작하는 html의 `<`를 인식하지 못한다고 함   
 * 해결 방법 3가지
-    * html file head에 no-cache 넣어주기 ❌
-    * html head에 <base href="/" /> 넣어주기 ❌
-    * package.json에 "homepage": "." 경로 설정 ⭕
+    * html file head에 no-cache 넣어주기 -> 해결 안됨 ❌
+    * html head에 <base href="/" /> 넣어주기 -> 해결 안됨 ❌
+    * package.json에 "homepage": "." 경로 설정 ⭕   
       ➡️ 기존에 github으로 배포했기 때문에 github 배포 주소가 남아있어서 삭제 후 변경하니 잘 배포됨 
       
 ### SNS 아이콘에 외부 링크 연결
