@@ -6,24 +6,18 @@
 </br>
 
 ## 1. 제작 기간 & 참여 인원
-- 2021년 11월 16일 ~ 11월 18일
+- 2022년 7월 1일 ~ 4일
 - 개인 프로젝트
 
 </br>
 
 ## 2. 사용 기술
-#### `Front-end`
-  - Javascript
-  - HTML/CSS
+### `Front-end`
+#### `React.js` `JSX`
 
 </br>
 
 ## 3. 핵심 기능
-
-<details>
-<summary><b>핵심 기능 설명 펼치기</b></summary>
-<div markdown="1">
-
 ### 인삿말
 - 접속 시 현재 시간대를 기준하여 아침 / 오후 / 저녁이 바뀌며 인삿말이 나오도록 구현했습니다
 
@@ -39,92 +33,35 @@
 - HTML 마크업 시 최대한 시맨틱한 마크업이 되도록 신경을 썼고,
 CSS 작업이나 유지 보수에 용이하도록 class명을 일관되게 주고자 노력했습니다
 
-</div>
-</details>
-
 </br>
 
 ## 4. 디버깅
-### 4-1. 핵심 디버깅
+### 4-1. 핵심 디버깅 (수정중)
 <details>
 <summary><b>기존 코드</b></summary>
 <div markdown="1">
 
 ```
-//alt값 가져오기
-function alts() {
-     for (let i = 0; i <heart.length; i++) {
-         console.log(heart[i].alt);
-     }
- }
- alts();
-
-//class에 따라 화면 렌더링
-let paints = document.querySelector(".paint");
-
-function clicker() {
-for (let i =0; i<heart.length; i++) {
-    if (heart[i].className === 'heart hticon') {
-        let plz = document.createElement('span');
-        let hi = document.createTextNode(heart[i].alt+'\n');
-        console.log(heart[i].alt);
-        plz.appendChild(hi);
-        paints.appendChild(plz);
-    }
-}
-}
-clicker();
+코드
 ```
 
 </div>
 </details>
 
-- 각 서비스에 있는 하트 아이콘을 누르면 맨 위의 테두리 안에 해당 서비스의 이름이 나오도록 구현하고 싶었음
-- to do list를 해본적이 있으니 이와 비슷하게 하면 되지 않을까? 하고 생각함
-- 그래서 위와 같이 먼저 이미지의 alt 값에 해당 서비스의 이름을 적어두고, 그것을 가져오는 함수를 짠 뒤,<br/>
-toggle on이 되어 class 명이 추가 될 때마다 그것을 그려주면 되지 않을까 생각함.
+- 
 
 <details>
 <summary><b>개선된 코드</b></summary>
 <div markdown="1">
 
 ```
-//Bookmark 공통
-
-const actives = document.querySelectorAll('.active');
-
-    for (let i =0; i< actives.length; i++) {
-        actives[i].classList.remove('active');
-        actives[i].addEventListener("click", () => {
-            actives[i].classList.toggle('active');
-        })
-        
-    }
-
-//Melon
-let paints = document.querySelector(".paint");
-let melons = document.getElementById('melon-id');
-let observermelon = new MutationObserver(fnHandlerDocsmelon),
-    elTargetmelon = melons,
-    objConfigmelon = {
-        childlist: false,
-        subtree: false,
-        attributes: true,
-        CharacterData: false
-    };
-function fnHandlerDocsmelon() {
-    paints.innerText = '　Melon';
-}
-observermelon.observe(elTargetmelon, objConfigmelon);
+코드
 ```
 
 </div>
 </details>
 
-- 하지만 위의 코드로는 toggle로 변화하는 class의 상태를 실시간으로 반영하지 못함
-- 구글링을 해서, 실시간으로 속성 변화 등을 감지해주는 MutationObserver를 써보면 어떨까 생각함
-- 다행히 class 변경을 감지하긴 하지만, class를 포함한 전체 속성 변경에 대해 반응하는 것이라<br/>on이 되었을 때 화면에 그려주지만 off가 되었을 때 화면에서 사라지지는 않음<br/>
-- j query나 다양한 방법을 찾아봤지만, 아직 이 부분은 찾지 못하고<br/>우선 처음 on이 되면 그것을 감지하여 화면에 나타나도록 구현함
+- 
 
 </br>
 
