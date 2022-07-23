@@ -30,10 +30,10 @@
 ### 배포시 메인 페이지가 바로 뜨지 않는 현상
 * gh-pages로 배포할 때의 문제로, '/' 라우터 처리가 잘 안됨
 * GitHub이 기본적으로 SPA 기능을 제공하지 않아 발생하는 문제라고함. Hash Router를 사용하면 문제가 없음
-* 이번에는 Hash Router 사용이 아닌 vercel로 재배포 해보기로함  
+* 이번에는 Hash Router 사용이 아닌 vercel로 재배포 해보기로 함  
 
 ### React-Uncaught SyntaxError: unexpected token '<'
-* vercel 배포시 에러가 떠서 `CI='' npm run build'를 오버라이드하여 해결했고, 배포 성공 메세지가 떴지만 빈 화면
+* vercel 배포시 에러가 떠서 `CI='' npm run build`를 오버라이드하여 해결했고, 배포 성공 메세지가 떴지만 빈 화면
 * 콘솔을 열어보니 위와 같은 에러 메세지가 오고 있음
 * 빌드할 때 웹팩이 chukFile을 JS가 아닌 HTML 구문으로 인식해서 생기는 문제   
 프로젝트 작업시에도 html 파일 첫줄이 왜 계속 에러가 나는지 궁금했는데, `<DOCTYPE`으로 시작하는 html의 `<`를 인식하지 못한다고 함   
