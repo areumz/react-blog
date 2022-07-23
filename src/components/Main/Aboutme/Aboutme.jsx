@@ -44,22 +44,22 @@ const Aboutme = () => {
       <h3>Follow</h3>
       <ul className={styles.sns}>
         <li>
-          <a href="www.facebook.com" target="_blank">
+          <a href="https://www.facebook.com" target="_blank">
             <img src={facebook} alt="Facebook" />
           </a>
         </li>
         <li>
-          <a href="www.twitter.com" target="_blank">
+          <a href="https://www.twitter.com" target="_blank">
             <img src={twitter} alt="Twitter" />
           </a>
         </li>
         <li>
-          <a href="www.instagram.com" target="_blank">
+          <a href="https://www.instagram.com" target="_blank">
             <img src={instagram} alt="Instagram" />
           </a>
         </li>
         <li>
-          <a href="www.github.com" target="_blank">
+          <a href="https://www.github.com" target="_blank">
             <img src={github} alt="GitHub" />
           </a>
         </li>
