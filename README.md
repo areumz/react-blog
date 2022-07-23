@@ -49,7 +49,11 @@
 * Gatsby로 실제 나의 블로그 만들어보기
 * SNS 아이콘 클릭시 주소가 이상하게 처리됨
   * 이 부분 수정 예정
-
+                    <li>
+                        <button onClick={()=> window.open('www.instagram.com', '_blank')}>
+                            <img src={instagram} alt="Instagram" />
+                        </button>
+                    </li>
 ## 6. 회고 / 느낀점
 > 
 
